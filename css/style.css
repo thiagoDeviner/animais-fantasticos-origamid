@@ -108,17 +108,62 @@ body {
 
 .animais-lista::-webkit-scrollbar-thumb {
   background: #fb5;
+  border-left: #faf6ec;
+  border-right: #faf6ec;
 }
 
 .animais-lista::-webkit-scrollbar-track {
-  background: #fb5;
+  background: #faf6ec;
+}
+
+.animais-descricao {
+  grid-column: 3;
+}
+
+.animais-descricao section {
+  margin-bottom: 3rem;
 }
 
 .faq {
   font-family: 'Playfair Display', serif;
-  font-size: 1.5em;
+  font-size: 1.2em;
   line-height: 1.2;
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
+}
+
+.titulo-faq {
+  grid-column: 1;
+  font-size: 5rem;
+  margin-right: 20px;
+}
+
+.faq-lista {
+  grid-column: 2 / 4;
+  margin-left: 3rem;
+}
+
+.faq-lista dt {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: .5rem;
+  color: #e54;
+}
+
+.faq-lista dt::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  margin-right: 10px;
+  background: #fb5;
+}
+
+.faq-lista dd {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: .5rem;
+  margin-left: 30px;
+
 }
 
 .faq dt  {
@@ -132,6 +177,83 @@ body {
 .faq dl  {
   font-family: 'Playfair Display', serif;
   font-size: .8em;
-  line-height: 1.2;
+  line-height: 1.2rem;
+  margin-bottom: .5rem;
+}
+
+.titulo-contato {
+  font-family: 'Playfair Display', serif;
+  grid-column: 1;
+  font-size: 4rem;
+  margin-right: 20px;
+}
+
+.mapa {
+  grid-column: 2;
+  margin-left: 1rem;
+  padding-top: 100px;
+}
+
+.dados {
+  padding-top: 100px;
+}
+
+.dados li {
   margin-bottom: 1rem;
+  }
+
+.dados li:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  margin-right: 10px;
+  background: #fb5;
+}
+
+.copy {
+  grid-column: 3 / 5;
+  margin-bottom: 2rem;
+  background: #fb5;
+}
+
+.copy p {
+  padding: 20px;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+}
+
+@media (max-width: 700px) {
+  body {
+    grid-template-columns: 1fr;
+  }
+
+  .menu .grid-section .copy {
+    grid-column: 1;
+  }
+
+  .grid-section {
+    grid-template-columns: 100px 1fr;
+    grid-gap: 10px;
+  }
+
+  .animais-lista {
+    grid-column: 1;
+  }
+
+  .faq-lista .dados .mapa {
+    grid-column: 2;
+  }
+
+  .grid-section h1 {
+    font-size: 3rem;
+  }
+
+  .menu {
+    margin-top: 0px;
+  }
+
+  .copy {
+    margin-bottom: 0px;
+  }
 }
